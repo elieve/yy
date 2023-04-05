@@ -88,16 +88,17 @@ async def gucast(client: Client, message: Message):
 
 @Ubot(["addbl"], "")
 async def bl_chat(client, message):
-    if len(message.command) != 2:
-        return await message.reply("**Gunakan Format:**\n `addbl [CHAT_ID]`")
+    chat_id = message.chat.id
+    chat = await client.get_chat(chat_id)
+    if chat.type == "private":
+        return await message.reply("Maaf, perintah ini hanya berlaku untuk grup.")
     user_id = client.me.id
-    chat_id = int(message.text.strip().split()[1])
-    if chat_id in await blacklisted_chats(user_id):
-        return await message.reply("Obrolan sudah masuk daftar Blacklist.")
-    blacklisted = await blacklist_chat(user_id, chat_id)
-    if blacklisted:
-        await message.edit("Obrolan telah berhasil masuk daftar Blacklist")
-
+    bajingan = await blacklisted_chats(user_id)
+    if chat in bajingan:
+        return await message.reply("Obrolan sudah masuk daftar Blacklist Gcast.")
+    await blacklist_chat(user_id, chat_id)
+    await message.reply("Obrolan telah berhasil dimasukkan ke dalam daftar Blacklist Gcast.")
+    
 @Ubot(["delbl"], "")
 async def del_bl(client, message):
     if len(message.command) != 2:
@@ -105,10 +106,10 @@ async def del_bl(client, message):
     user_id = client.me.id
     chat_id = int(message.text.strip().split()[1])
     if chat_id not in await blacklisted_chats(user_id):
-        return await message.reply("Obrolan berhasil dihapus dari daftar Blacklist.")
+        return await message.reply("Obrolan berhasil dihapus dari daftar Blacklist Gcast.")
     whitelisted = await whitelist_chat(user_id, chat_id)
     if whitelisted:
-        return await message.edit("Obrolan berhasil dihapus dari daftar Blacklist.")
+        return await message.edit("Obrolan berhasil dihapus dari daftar Blacklist Gcast.")
     await message.edit("Sesuatu yang salah terjadi.")
     
 
@@ -117,14 +118,14 @@ async def all_chats(client, message):
     text = "**Daftar Blacklist Gcast:**\n\n"
     j = 0
     user_id = client.me.id
-    nama_lu = await blacklisted_chats(user_id)
     for count, chat_id in enumerate(await blacklisted_chats(user_id), 1):
         try:
-            title = (await client.me.id.get_chat(chat_id)).title
+            chat = await client.get_chat(chat_id)
+            title = chat.title
         except Exception:
             title = "Private\n"
         j = 1
-        text += f"**{count}.{title}**`[{chat_id}]`\n"
+        text += f"**{count}.{title}**`{chat_id}`\n"
     if j == 0:
         await message.reply("Tidak Ada Obrolan Daftar Hitam")
     else:
