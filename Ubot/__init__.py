@@ -47,6 +47,7 @@ class Bot(Client):
             api_hash=API_HASH,
             api_id=API_ID,
             bot_token=BOT_TOKEN,
+            sleep_threshold=5,
             plugins=dict(root="Ubot/modules/bot"),
         )
         self.LOGGER = LOGGER
