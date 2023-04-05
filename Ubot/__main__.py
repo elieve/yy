@@ -11,7 +11,7 @@ from platform import python_version as py
 from .logging import LOGGER
 from pyrogram import __version__ as pyro
 from Ubot.modules import ALL_MODULES
-from Ubot.core.db import *
+from Ubot.core.db import buat_log, get_botlog
 from config import SUPPORT, CHANNEL
 import os
 from dotenv import load_dotenv
