@@ -20,7 +20,7 @@ ADMIN1_ID.append()
 ADMIN2_ID.append()
 
 
-MONGO_URL = getenv("MONGO_URL", "")
+MONGO_URL = getenv("MONGO_URL", "mongodb+srv://bayu:gilpad008@cluster0.bzrctiz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 BOT_TOKEN = getenv("BOT_TOKEN", "7417164770:AAGMcrNEx-Zd9s9tcAQ_xU0AEcJ5dxb2r1Y")
 PM_AUTO_BAN = strtobool(getenv("PM_AUTO_BAN", "True"))
 ALIVE_PIC = getenv("ALIVE_PIC")
