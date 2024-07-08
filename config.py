@@ -11,7 +11,7 @@ API_ID = int(getenv("API_ID")) #optional
 API_HASH = getenv("API_HASH") #optional
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "").split()))
 DEEP_AI = getenv("DEEP_AI", "d7394561-0528-4714-a1ee-edd7020b48e1")
-OWNER_ID = int(getenv("OWNER_ID"))
+OWNER_ID = int(getenv("OWNER_ID", "5862907188"))
 ADMIN1_ID = list(map(int, getenv("ADMIN1_ID", "").split()))
 ADMIN2_ID = list(map(int, getenv("ADMIN2_ID", "").split()))
 
@@ -21,10 +21,10 @@ ADMIN2_ID.append()
 
 
 MONGO_URL = getenv("MONGO_URL", "")
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN", "7417164770:AAGMcrNEx-Zd9s9tcAQ_xU0AEcJ5dxb2r1Y")
 PM_AUTO_BAN = strtobool(getenv("PM_AUTO_BAN", "True"))
 ALIVE_PIC = getenv("ALIVE_PIC")
-ALIVE_TEXT = getenv("ALIVE_TEXT")
+ALIVE_TEXT = getenv("ALIVE_TEXT", "AKU TERKENTOD MAS")
 PM_LOGGER = getenv("PM_LOGGER", None)
 OPENAI_API = getenv("OPENAI_API", "")
 BOTLOG_CHATID = int(getenv("BOTLOG_CHATID") or 0)
