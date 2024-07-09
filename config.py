@@ -20,23 +20,23 @@ ADMIN1_ID.append(5862907188)
 ADMIN2_ID.append(5862907188)
 
 
-MONGO_URL = getenv("MONGO_URL", "mongodb+srv://bayu:gilpad008@cluster0.bzrctiz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-BOT_TOKEN = getenv("BOT_TOKEN", "7417164770:AAGMcrNEx-Zd9s9tcAQ_xU0AEcJ5dxb2r1Y")
-PM_AUTO_BAN = strtobool(getenv("PM_AUTO_BAN", "True"))
+MONGO_URL = getenv("MONGO_URL", "mongodb+srv://Bayu:bayu@bayu.2donbau.mongodb.net/?retryWrites=true&w=majority&appName=bayu")
+BOT_TOKEN = getenv("BOT_TOKEN", "7003599470:AAHHlC_NRrcTYx-Fci5Q3-hgsW-tW3avIvA")
+PM_AUTO_BAN = strtobool(getenv("PM_AUTO_BAN", "False"))
 ALIVE_PIC = getenv("ALIVE_PIC")
 ALIVE_TEXT = getenv("ALIVE_TEXT", "AKU TERKENTOD MAS")
 PM_LOGGER = getenv("PM_LOGGER", None)
 OPENAI_API = getenv("OPENAI_API", "")
 BOTLOG_CHATID = int(getenv("BOTLOG_CHATID") or 0)
-BLACKLIST_GCAST = {int(x) for x in getenv("BLACKLIST_GCAST", "").split()}
+BLACKLIST_GCAST = {int(x) for x in getenv("BLACKLIST_GCAST", "-1002169998808").split()}
 GIT_TOKEN = getenv("GIT_TOKEN") #personal access token
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 BRANCH = getenv("BRANCH", "naya") #don't change
 REPO_URL = getenv("REPO_URL", "https://github.com/elieve/yy")
 CMD_HNDLR = getenv("CMD_HNDLR", ",")
-SUPPORT = int(getenv("SUPPORT", ""))
-CHANNEL = int(getenv("CHANNEL", ""))
+SUPPORT = int(getenv("SUPPORT", "-1002169998808"))
+CHANNEL = int(getenv("CHANNEL", "-1002169998808"))
 SESSION1 = getenv("SESSION1", "BQE8-oIAX2fMymmLwBMBNCEZVGRaR7LNGuUkro3XehYnfiaSfgkofapfqpdsz1a9u5m1E1YgOb2v2inZZwoi4VEmrtFMzgNi4C5E5fUjI-wHiG1_IEnpuzo-kkVmQrDMtCtQ-mLh4ivk12ZKCfOQhyViJy1rNkKZmXZJQS1soIhW37slXWqOtTBUVd494jG4KhLdOeoY9knMABaQPbmnQjb0GOPHOzWS_X0N-_dTNF4z824zAvt5k4lomLpfn5RBXyYdF1nHRYMyiD1n5JWOh639_fNQax_S5xNPyvGTabILrEK171ZxshJ127ffRP8thipgB0r6gOqglr2MfL9s9fAnNNNuUAAAAAFddN00AA")
 SESSION2 = getenv("SESSION2", "")
 SESSION3 = getenv("SESSION3", "")
