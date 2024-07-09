@@ -7,8 +7,8 @@ from distutils.util import strtobool
 load_dotenv(".env")
 
 
-API_ID = int(getenv("API_ID")) #optional
-API_HASH = getenv("API_HASH") #optional
+API_ID = int(getenv("API_ID", "20773506")) #optional
+API_HASH = getenv("API_HASH", "4ff20535621ee6f9aa6ba9443b0ec592") #optional
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "").split()))
 DEEP_AI = getenv("DEEP_AI", "d7394561-0528-4714-a1ee-edd7020b48e1")
 OWNER_ID = int(getenv("OWNER_ID", "5862907188"))
@@ -37,7 +37,7 @@ REPO_URL = getenv("REPO_URL", "https://github.com/elieve/yy")
 CMD_HNDLR = getenv("CMD_HNDLR", ",")
 SUPPORT = int(getenv("SUPPORT", "-1002169998808"))
 CHANNEL = int(getenv("CHANNEL", "-1002169998808"))
-SESSION1 = getenv("SESSION1", "BQE8-oIAX2fMymmLwBMBNCEZVGRaR7LNGuUkro3XehYnfiaSfgkofapfqpdsz1a9u5m1E1YgOb2v2inZZwoi4VEmrtFMzgNi4C5E5fUjI-wHiG1_IEnpuzo-kkVmQrDMtCtQ-mLh4ivk12ZKCfOQhyViJy1rNkKZmXZJQS1soIhW37slXWqOtTBUVd494jG4KhLdOeoY9knMABaQPbmnQjb0GOPHOzWS_X0N-_dTNF4z824zAvt5k4lomLpfn5RBXyYdF1nHRYMyiD1n5JWOh639_fNQax_S5xNPyvGTabILrEK171ZxshJ127ffRP8thipgB0r6gOqglr2MfL9s9fAnNNNuUAAAAAFddN00AA")
+SESSION1 = getenv("SESSION1", "BQE8-oIAcP-I6Byn32OFKbg9UztjroulSqYc1H_DnfiPp0Hzs1eM-0Io4tsHXeldTL6pvsC4eZHHukXo0R9t8pOzx-NqZM8Pbqn6fhpvRKUzeplyd56UOmm3qnMsSbLgGTVEclBokNPyaW_qwfR-Lrykpk2ZlO97khDn_t7O4fors2iJaEit_v-9OJIsYJYNKhg-eJ1FX_A1z_yMMdMp0Ird8jsZTdGeE-m0cKVvuAPv84qk_M1NoCpF-CzW9kKcOehRLBuMGXqVqcTGhD3lbsC2vF3jUkdSbD4RWoXTf3jRCnckxPS0WBLKw2z5D_gFgcLlI48y2GWDVkP_a2tWGX2ZOYgObwAAAAFddN00AA")
 SESSION2 = getenv("SESSION2", "")
 SESSION3 = getenv("SESSION3", "")
 SESSION4 = getenv("SESSION4", "")
