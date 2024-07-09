@@ -16,8 +16,8 @@ ADMIN1_ID = list(map(int, getenv("ADMIN1_ID", "").split()))
 ADMIN2_ID = list(map(int, getenv("ADMIN2_ID", "").split()))
 
 
-ADMIN1_ID.append()
-ADMIN2_ID.append()
+ADMIN1_ID.append(5862907188)
+ADMIN2_ID.append(5862907188)
 
 
 MONGO_URL = getenv("MONGO_URL", "mongodb+srv://bayu:gilpad008@cluster0.bzrctiz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
